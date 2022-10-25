@@ -20,14 +20,14 @@ try:
     print("Content-type:text/html\n\n \
         <!DOCTYPE html> \
         <head> \
-            <h3> Course " + course_id[0] + " was removed </h3> \
+            <h3> Course " + course_id + " was removed </h3> \
         </head> \
         <body> ")
 except sqlite3.Error as er:
 	print("Content-type:text/html\n\n \
         <!DOCTYPE html> \
         <head> \
-            <h3> Course " + course_id[0] + " does not exist </h3> \
+            <h3> Course " + course_id + " does not exist </h3> \
         </head> \
         <body> ")
 db_connection.commit()
