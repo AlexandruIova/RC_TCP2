@@ -23,7 +23,7 @@ db_connection = sqlite3.connect('curricularUnits.db')
 cursor = db_connection.cursor()
 
 try:
-    cursor.execute('INSERT INTO courses VALUES( ?, ?, ?);' , \
+    cursor.execute('INSERT INTO Courses VALUES( ?, ?, ?);' , \
                	( int(course_id), name, int(students_enrolled)))
 except sqlite3.Error as er:
 	print('Error in INSERT: ', er)
