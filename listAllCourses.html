@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List All Courses (JS)</title>
+</head>
+<body>
+    <h2>List all courses (JavaScript Version)</h2>
+    <hr>
+    <div id="action">
+        <p>The complete course list will appear here</p>
+        <button type="button" onclick="displayList()">List all courses</button>
+    </div>
+    <hr>
+    <p> <a href="../index.html" > Return to main page </a> </p>
+
+    <script>
+        function displayList(){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function(){
+                document.getElementById("action").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "./cgi-bin/listAllCoursesJS.py", true);
+            xhttp.send();
+        }   
+    </script>
+
+</body>
+</html>
