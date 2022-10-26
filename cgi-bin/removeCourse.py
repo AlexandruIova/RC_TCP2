@@ -14,9 +14,8 @@ course_id = str(form["course_id"].value)
 db_connection = sqlite3.connect('curricularUnits.db')
 cursor = db_connection.cursor()
 
-course_id = course_id[0]
 try:
-    cursor.execute('DELETE FROM Courses WHERE course_id = (?)', course_id)
+    cursor.execute('DELETE FROM Courses WHERE course_id = ?', [course_id])
     print("Content-type:text/html\n\n \
         <!DOCTYPE html> \
         <head> \
