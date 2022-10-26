@@ -21,3 +21,7 @@ Nota: per concatenare con le funzioni di python bisogna che le variabili siano a
 
 ### 2.4 Change the number of students enrolled in a course
 I first check if user_id exists and then I run the command. Otherwise the command would not give an error and I won't be able to catch it.
+
+### 2.5 List information about all the courses (JavaScript Version)
+Understood very little tbh but made it work.
+As far as I understood AJAX makes so that the result will be in a "narrower" box but treated as a full page I guess.
