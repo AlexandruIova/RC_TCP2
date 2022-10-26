@@ -17,4 +17,7 @@ Took `contactList.py` from Lab05 file and adapted it adding more SQL commands.
 The usual command from deleting something from SQLite is:
 `DELETE FROM table WHERE condition;`
 With `try()...except` I handle the case in which there are no courses with that Id.
-Nota: per concatenare con le funzioni di python bisogna che le variabili siano liste.
+Nota: per concatenare con le funzioni di python bisogna che le variabili siano array/liste.
+
+### 2.4 Change the number of students enrolled in a course
+I first check if user_id exists and then I run the command. Otherwise the command would not give an error and I won't be able to catch it.
