@@ -3,7 +3,7 @@
 from http.server import CGIHTTPRequestHandler, HTTPServer
 
 def main():
-	httpd = HTTPServer(('',5556),CGIHTTPRequestHandler)
+	httpd = HTTPServer(('',65008),CGIHTTPRequestHandler)
 	print( "Starting webserver ...")
 	httpd.serve_forever()
 	print("Error in server!")    
