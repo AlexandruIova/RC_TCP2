@@ -41,7 +41,7 @@ print('</ul>')
 
 print('<hr>')
 
-print("<div>Number of courses:" + str(nCourses[0]) + "   Number of students:" + str(sumStud[0]) + "    Average number of students:" + str(avg[0]) + "</div>")
+print("<div>Number of courses: " + str(nCourses[0]) + "   Number of students: " + str(sumStud[0]) + "    Average number of students: " + str(avg[0]) + "</div>")
 
 print("""</body> </html>""")
 
