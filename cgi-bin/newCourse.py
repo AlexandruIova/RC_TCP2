@@ -29,17 +29,14 @@ try:
 except sqlite3.Error as er:
 	print('Error in INSERT: ', er)
 	errc = er
-	print('<h2>errore code: ', + errc + '</h2>')
-	print("""  <p> <a href="../index.html" > Return to main page </a> </p>
-    </body>
-     </html>""")
 db_connection.commit()
 db_connection.close()
 
 if(errc==0):
     print('<h2> A new course was added ' + \
     str(course_id) + ', ' + name + '</h2> <p>')
-    print("""  <p> <a href="../index.html" > Return to main page </a> </p>     
-    </body> 
-    </html>""")
+print("""  <p> <a href="../index.html" > Return to main page </a> </p>     
+</body> 
+</html>""")
+
 
