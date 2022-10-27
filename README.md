@@ -25,3 +25,5 @@ I first check if user_id exists and then I run the command. Otherwise the comman
 ### 2.5 List information about all the courses (JavaScript Version)
 Understood very little tbh but made it work.
 As far as I understood AJAX makes so that the result will be in a "narrower" box but treated as a full page I guess.
+
+Davide
