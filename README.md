@@ -28,5 +28,6 @@ As far as I understood AJAX makes so that the result will be in a "narrower" box
 
 ## TODO
 - [x] Change port to student's number
-- [ ] 2.2 handle the case where there are no courses in the database.
+- [x] 2.2 handle the case where there are no courses in the database.
 - [ ] error cases
+- [ ] 2.3 fix problem removeCourse (if there's no element it tells removed)
