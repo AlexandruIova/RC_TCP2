@@ -26,4 +26,7 @@ I first check if user_id exists and then I run the command. Otherwise the comman
 Understood very little tbh but made it work.
 As far as I understood AJAX makes so that the result will be in a "narrower" box but treated as a full page I guess.
 
-Davide
+## TODO
+- [x] Change port to student's number
+- [ ] 2.2 handle the case where there are no courses in the database.
+- [ ] error cases
