@@ -29,7 +29,7 @@ else:
         <head> \
             <h3> Course " + course_id + " doesn't exist </h3> \
         </head> \
-        body> ")
+        <body> ")
     
     
     
