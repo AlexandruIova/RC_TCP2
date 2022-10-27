@@ -34,17 +34,23 @@ except sqlite3.Error as er:
 print('<ul>')
 
 for linha in linhas:
-    print( '<li>' + str(linha[0]) + ' ' + linha[1] + ' ' + str(linha[2]) + '</li>')
+    print( '<li>' + str(linha[0]) + ' ' + linha[1] + ' ' + str(linha[2]) + ' students</li>')
 
 print('</ul>')
 
 print('<hr>')
 
-print("<div>Number of courses:" + str(nCourses[0]) + "   Number of students:" + str(sumStud[0]) + "    Average number of students:" + str(avg[0]) + "</div>")
+if(nCourses[0]==0):
+    print("<div> There's no courses</div>")
+else:
+     print("<div>Number of courses: " + str(nCourses[0]) + "   Number of students: " + str(sumStud[0]) + "    Average number of students: " + str(avg[0]) + "</div>")
 
 print('<hr>')
 
-print("""</body> </html>""")
+print("""  <p> <a href="../index.html" > Return to main page </a> </p>     
+</body> 
+</html>""")
+
 
 db_connection.commit()
 db_connection.close()
