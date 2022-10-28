@@ -40,8 +40,10 @@ for linha in linhas:
 print('</ul>')
 
 print('<hr>')
-
-print("<div>Number of courses: " + str(nCourses[0]) + "   Number of students: " + str(sumStud[0]) + "    Average number of students: " + str(avg[0]) + "</div>")
+if(nCourses[0]==0):
+    print("<div> There's no courses</div>")
+else:
+     print("<div>Number of courses: " + str(nCourses[0]) + "   Number of students: " + str(sumStud[0]) + "    Average number of students: " + str(avg[0]) + "</div>")
 
 print("""</body> </html>""")
 
