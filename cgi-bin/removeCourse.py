@@ -9,7 +9,17 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
     
 form = cgi.FieldStorage()
 
+footer = """ <hr>'
+<p> <a href="../index.html" > Return to main page </a> </p>
+</body>
+</html>"""
+
 course_id = str(form["course_id"].value)
+
+if course_id == "":
+    print('<h2> Please fill in all the field </h2>')
+    print(footer)
+    sys.exit(-1)
 
 db_connection = sqlite3.connect('curricularUnits.db')
 cursor = db_connection.cursor()
@@ -44,7 +54,4 @@ except sqlite3.Error as er:
 db_connection.commit()
 db_connection.close()
 
-print('<hr>')
-print("""  <p> <a href="../index.html" > Return to main page </a> </p>
-</body>
-</html>""")
+print(footer)

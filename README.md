@@ -32,4 +32,5 @@ As far as I understood AJAX makes so that the result will be in a "narrower" box
 - [x] error cases
 - [x] 2.3 fix problem removeCourse (if there's no element it tells removed)
 - [x] Fix newCourse.py (sanitize integer inputs)
-- [ ] Fix changeStudentsNumeber.py (sanitize input on n° of students)
+- [x] Fix changeStudentsNumeber.py (sanitize input on n° of students)
+- [x] Sanitized empty fields

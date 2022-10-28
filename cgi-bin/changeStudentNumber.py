@@ -25,20 +25,24 @@ footer = """ <hr>
 course_id = str(form["course_id"].value)
 students_enrolled = str(form["students_enrolled"].value)
 
+if ((course_id == "") or (students_enrolled == "")):
+    print('<h2> Please fill in all the field </h2>')
+    print(footer)
+    sys.exit(-1)
 
 if (not course_id.isdigit()) and (not students_enrolled.isdigit()): 
-    print('<h2> Input [Course id AND Students enrolled] error, should be an integer </h2> <p>')
+    print('<h2> Input [Course id AND Students enrolled] error, should be an integer </h2>')
     print(footer)
     sys.exit(-1)
 
 if(not course_id.isdigit()):
-    print('<h2> Input [Course id] error, should be an integer </h2> <p>')
+    print('<h2> Input [Course id] error, should be an integer </h2>')
     print(footer)
     sys.exit(-1)
 
 
 if(not students_enrolled.isdigit()):
-    print('<h2> Input [Students enrolled] error, should be an integer </h2> <p>')
+    print('<h2> Input [Students enrolled] error, should be an integer </h2>')
     print(footer)
     sys.exit(-1)
 
