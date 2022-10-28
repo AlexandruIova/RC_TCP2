@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from curses.ascii import isdigit
 import sqlite3
 import cgi
 import sys
@@ -24,13 +25,21 @@ footer = """ <hr>
 course_id = str(form["course_id"].value)
 students_enrolled = str(form["students_enrolled"].value)
 
-try:
-    int(students_enrolled)
-except Exception as e:
+
+if (not course_id.isdigit()) and (not students_enrolled.isdigit()): 
+    print('<h2> Input [Course id AND Students enrolled] error, should be an integer </h2> <p>')
+    print(footer)
+    sys.exit(-1)
+
+if(not course_id.isdigit()):
+    print('<h2> Input [Course id] error, should be an integer </h2> <p>')
+    print(footer)
+    sys.exit(-1)
+
+
+if(not students_enrolled.isdigit()):
     print('<h2> Input [Students enrolled] error, should be an integer </h2> <p>')
-    print(""" <p> <a href="../index.html" > Return to main page </a> </p>
-    </body>
-    </html>""")
+    print(footer)
     sys.exit(-1)
 
 

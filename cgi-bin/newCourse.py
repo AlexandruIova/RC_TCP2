@@ -24,17 +24,20 @@ course_id = str(form["course_id"].value)
 name = str(form["name"].value)
 students_enrolled = str(form["students_enrolled"].value)
 
-try:
-    course_id = int(course_id)
-except Exception as e:
-    print('<h2> Input [Course id] error, should be an integer </h2> <p>')
-    print(footer)
+if ((not course_id.isdigit() and (not students_enrolled.isdigit()))):
+    print('<h2> Input [Course id AND Students enrolled] error, should be an integer </h2>')
+    print(footer)  
+    sys.exit(-1)
 
-try:
-    students_enrolled = int(students_enrolled)
-except Exception:
-    print('<h2> Input [Students enrolled] error, should be an integer </h2> <p>')
-    print(footer)
+if not course_id.isdigit():
+    print('<h2> Input [Course id] error, should be an integer </h2>')
+    print(footer)  
+    sys.exit(-1)
+
+if not students_enrolled.isdigit():
+    print('<h2> Input [Students enrolled] error, should be an integer </h2>')
+    print(footer)  
+    sys.exit(-1)
 
 db_connection = sqlite3.connect('curricularUnits.db')
 cursor = db_connection.cursor()
