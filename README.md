@@ -31,4 +31,4 @@ As far as I understood AJAX makes so that the result will be in a "narrower" box
 - [x] 2.2 handle the case where there are no courses in the database.
 - [x] error cases
 - [x] 2.3 fix problem removeCourse (if there's no element it tells removed)
-- [ ] Fix newCourse.py 
+- [x] Fix newCourse.py 
