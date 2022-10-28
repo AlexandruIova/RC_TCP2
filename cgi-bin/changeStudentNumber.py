@@ -28,9 +28,9 @@ try:
     int(students_enrolled)
 except Exception as e:
     print('<h2> Input [Students enrolled] error, should be an integer </h2> <p>')
-    print("""  <p> <a href="../index.html" > Return to main page </a> </p>
-         </body>
-         </html>""")
+    #print(" <p> <a href="../index.html" > Return to main page </a> </p>
+     #    </body>
+      #   </html>")
 
 
 db_connection = sqlite3.connect('curricularUnits.db')
